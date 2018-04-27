@@ -12,10 +12,10 @@ from linebot.exceptions import (
 from linebot.models import *
 # add food
 import random
-food1=['金拱門','肯德基','摩斯漢堡','對面早餐店','宮口街蘿蔔糕米腸','喜德嘆烤三明治','Q Burger','吃自己','甲~土~豆~~','吃土','不告訴你','吃飽了','我很飽','你有障礙我也幫不了你']
-food2=['金拱門','肯德基','摩斯漢堡','炒飯炒麵','火鍋','快炒','牛排','自助餐','牛肉麵','吃自己','甲~土~豆~~','吃土','不告訴你','吃飽了','我很飽','你有障礙我也幫不了你']
-food3=['金拱門','肯德基','摩斯漢堡','炒飯炒麵','火鍋','滷味','夜市','快炒','秦記','鐵板燒','牛排','牛肉麵','自助餐','雞排','麻油雞','拿坡里','吃自己','甲~土~豆~~','吃土','不告訴你','吃飽了','我很飽','你有障礙我也幫不了你']
-food4=['金拱門','肯德基','摩斯漢堡','火鍋','夜市','阿婆','阿國','快炒','鐵板燒','牛排','牛肉麵','雞排','麻油雞','烤三小','吃自己','甲~土~豆~~','吃土','不告訴你','吃飽了','我很飽','你有障礙我也幫不了你']
+food1=['金拱門','肯德基','摩斯漢堡','對面早餐店','宮口街蘿蔔糕米腸','喜德嘆烤三明治','Q Burger','吃自己','甲~土~豆~~','吃土','不告訴你','你有障礙我也幫不了你']
+food2=['金拱門','肯德基','摩斯漢堡','炒飯炒麵','火鍋','快炒','牛排','自助餐','牛肉麵','腿庫飯','吃自己','甲~土~豆~~','吃土','不告訴你','你有障礙我也幫不了你']
+food3=['金拱門','肯德基','摩斯漢堡','炒飯炒麵','火鍋','滷味','夜市','快炒','秦記','鐵板燒','牛排','牛肉麵','腿庫飯','自助餐','雞排','麻油雞','拿坡里','吃自己','甲~土~豆~~','吃土','不告訴你','你有障礙我也幫不了你']
+food4=['金拱門','肯德基','摩斯漢堡','火鍋','夜市','阿婆','阿國','快炒','鐵板燒','牛排','牛肉麵','雞排','麻油雞','烤三小','吃自己','甲~土~豆~~','吃土','不告訴你','你有障礙我也幫不了你']
 # google sheet start
 # import gspread
 # from oauth2client.service_account import ServiceAccountCredentials
@@ -89,7 +89,7 @@ def handle_message(event):
         get=random.sample(food1,1)
         answer=get[0]
         print(answer)
-        message = TextSendMessage(text=answer)
+        message = TextSendMessage(text='誠心建議'+answer)
         line_bot_api.reply_message(
             event.reply_token,
             message)
@@ -98,7 +98,7 @@ def handle_message(event):
         get=random.sample(food2,1)
         answer=get[0]
         print(answer)
-        message = TextSendMessage(text=answer)
+        message = TextSendMessage(text='誠心建議'+answer)
         line_bot_api.reply_message(
             event.reply_token,
             message)
@@ -107,7 +107,7 @@ def handle_message(event):
         get=random.sample(food3,1)
         answer=get[0]
         print(answer)
-        message = TextSendMessage(text=answer)
+        message = TextSendMessage(text='誠心建議'+answer)
         line_bot_api.reply_message(
             event.reply_token,
             message)
@@ -116,7 +116,7 @@ def handle_message(event):
         get=random.sample(food4,1)
         answer=get[0]
         print(answer)
-        message = TextSendMessage(text=answer)
+        message = TextSendMessage(text='誠心建議'+answer)
         line_bot_api.reply_message(
             event.reply_token,
             message)
