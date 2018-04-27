@@ -89,7 +89,7 @@ def handle_message(event):
         get=random.sample(food1,1)
         answer=get[0]
         print(answer)
-        message = TextSendMessage(text='誠心建議'+answer)
+        message = TextSendMessage(text='誠心建議:'+answer)
         line_bot_api.reply_message(
             event.reply_token,
             message)
@@ -98,7 +98,7 @@ def handle_message(event):
         get=random.sample(food2,1)
         answer=get[0]
         print(answer)
-        message = TextSendMessage(text='誠心建議'+answer)
+        message = TextSendMessage(text='誠心建議:'+answer)
         line_bot_api.reply_message(
             event.reply_token,
             message)
@@ -107,7 +107,7 @@ def handle_message(event):
         get=random.sample(food3,1)
         answer=get[0]
         print(answer)
-        message = TextSendMessage(text='誠心建議'+answer)
+        message = TextSendMessage(text='誠心建議:'+answer)
         line_bot_api.reply_message(
             event.reply_token,
             message)
@@ -116,7 +116,7 @@ def handle_message(event):
         get=random.sample(food4,1)
         answer=get[0]
         print(answer)
-        message = TextSendMessage(text='誠心建議'+answer)
+        message = TextSendMessage(text='誠心建議:'+answer)
         line_bot_api.reply_message(
             event.reply_token,
             message)
